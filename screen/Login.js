@@ -15,24 +15,6 @@ export default class Login extends Component {
     static navigationOptions = {
         header: null
     }
-    componentWillMount(){
-        console.log('componentWillMount');
-        AsyncStorage.getItem('userData', (err, result)=>{
-            if(result){
-                console.log('found it')
-                this.props.navigation.navigate('Home');
-            }
-        });
-    }
-    componentDidMount(){
-        console.log('componentDidMount')
-    }
-    componentWillUpdate(){
-        console.log('componentWILLUPDATE')
-    }
-    componentWillReceiveProps(){
-        console.log('componentWILLRe')
-    }
     login = () => {
         this.setState({
             detailsIncorrect: false,
